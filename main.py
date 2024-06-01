@@ -32,6 +32,10 @@ col1.metric('Cidades', df_filtered['Cidade'].nunique())
 col2.metric('Paróquias', df_filtered['Paróquia'].nunique())
 col3.metric('Grupos', df_filtered['Grupo de Jovens'].nunique())
 
+st.divider()
+
+st.table(df_filtered)
+
 
 st.divider()
 
@@ -40,15 +44,6 @@ st.write('Mapa de coordenadas')
 st.map(df,
     latitude='Latitude',
     longitude='Longitude')
-
-
-
-
-st.divider()
-
-st.table(df_filtered)
-
-
 
 # result = st.button('Inserir um novo registro')
 # if result:
